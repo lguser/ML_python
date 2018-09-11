@@ -1,0 +1,9 @@
+Data Preparations Sites:
+dataiku.com
+trifacta.com
+
+Linux:
+javatpoint.com
+
+Regular Expressions:
+https://docs.oracle.com/cd/B13789_01/appdev.101/b10795/adfns_re.htm
