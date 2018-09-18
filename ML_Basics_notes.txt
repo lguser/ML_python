@@ -1,0 +1,108 @@
+
+Machine learning is, more or less, a way for computers to learn things without being specifically programmed. 
+But how does that actually happen?
+
+Steps in Machine Learning:
+
+1) Data Extraction
+2) Data Cleansing & Transformations
+3) Data Preparations
+4) Model Selection
+5) Train the Model (Train data & Test data)
+6) Measure accuracy of the model
+7) Deploy the model
+8) Tune/Rebuild the model
+------------------------------
+
+1) Data Extraction:
+	Social media, RDBMS, NOSQL, Streaming data, Data files, web crawling data, click seance data
+	
+2) Data Cleansing:
+	data duplication
+	cleaning null values
+  Transformations: 
+	raw data is not always fit to the model
+	some variable may not be fit with the model
+	need to transform from unfit to fit variable
+	
+3) Data Preparations:
+	Based on supervised or unsupervised need to prepare the data
+	--> Supervised model should have input variable & Target Labels
+	--> Un supervised model should have Only input variable with out Labels 
+	
+	Train set, Test test, Validation set
+	
+	Suggestions for Train set:
+	1. provide as many as possible input examples
+	2. Don't keep all data into train set (split as 80% or 70%)
+	3. remaining 20% or 30% of data in test test
+	4. before train the model, shuffle the train set (to reduce the over fitting problem)
+	5. Normalize variables ( divided by max value with all the values to make it 0 to 1)
+	6. Reduce dimensionality ( remove unnecessary variables)
+
+---------------------------------------------------------------------
+
+Predictive models:
+
+1) Regression models :- Target variable/Labels are the continuous variable (value can be anything- numerous)
+2) Classification models :- target label is a classifier (any one of the given options - ex: Male/female,yes/no)
+
+ Regression models:
+	1) Linear Regression
+	2) Non Linear Regression
+	3) Decision Tree
+	4) Random forest
+	5) Lasso Regression
+	6) Ridge Regression
+	(All above models can be applied on Gradient descent algorithm (parameter tuning technique) - Batch gradient, Stochastic
+	gradient)
+
+In all regression models input features/variable and target label should be continuous & numerous.
+If any variable is char that has to be transformed into to scores.
+
+
+	Classification Models :- Predicting a classifier (any one of the given options)
+	1) Logistic Regression
+	2) NaiveBayes Classification
+	3) Decision Tree
+	4) Random forest
+	5) SVM Classifier (support Vector machines)
+	
+If no.of classifier are only 2, then it's Binary classification
+More than 2, then it's Multinomial or Polynomial classification
+
+ --> Why many models for classification ?
+ Each model has its own purpose and limitations
+ 
+ 1) Logistic Regression : It can classify very well if all input variable are continuous
+							Not good when there are categorical variable in the data (accuracy will decrease)
+							
+ 2) decision Tree : This would be best one when there are categorical variable in the data
+		This can deal with both the categorical & continuous 
+		problem :- This is highly iterative algorithm (if we have huge data, then the processing time will be more)
+ 
+ 3) Random-forest : If the decision tree accuracy is less or over-fit then we should go for 	random forest
+		problem : This is more and more iterative model than decision tree, it consumes more computing power (really required GPU's, when we have huge data)
+ 
+ 4) NaiveBayes : All input variable are categorical and target variable is categorical
+				(Above problem can be done by decision tree / random forest. But these are highly iterative algorithms)
+				in this case naiveBayes will be the best one, this is less iterative algorithm, which takes less computing power
+				
+	
+	Logistic -> All input continuous & target classifier --> Less computing power
+	NaiveBayes -> All inputs are categorical & target classifier --> Less computing power
+	decision Tree -> inputs can be both continuous & categorical & target classifier --> High computing power
+	Random-forest -> inputs can be both continuous & categorical & target classifier --> Very High computing power
+		
+SVM (Support Vector Machines)- It can predict complex predictions
+				It will construct a big bridge b/w two classifiers
+				SVM can deal non linear predictions of classifier
+
+Simple prediction & complex prediction:
+
+In Simple prediction the common features are very less & distinguished features are very high (ex: diff b/w cat & dog)
+
+In Complex prediction the common features are very high and distinguished features are less (ex : female dog & male dog)
+
+
+	
